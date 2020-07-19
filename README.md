@@ -7,7 +7,7 @@ The document is complied for file structure, and some brief introduction and set
 Basically, the file `./code` includes all programs and there are some introduction to them partially.
 
 * **Model_obj.py:** The architecture of 3D coordinate regression CNN.
-* **Model_score.py:** The architecture of 3D coordinate regression CNN.
+* **Model_score.py:** The architecture of score regression CNN.
 * **cnn.py / cnn_Sam.py:** It contains architecture of end-to-end architecture and some important functions for all kinds of training.
 
 * **train_obj.py:** With RGB images as the input, and the depth information as the ground truth, it trains a 3D coordinate regression CNN to predict each pixel's real scene coordinate in the image.
