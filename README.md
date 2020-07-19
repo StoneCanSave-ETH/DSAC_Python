@@ -6,10 +6,14 @@ The document is complied for file structure, and some brief introduction and set
 
 Basically, the file `./code` includes all programs and there are some introduction to them partially.
 
+* **Model_obj.py:** The architecture of 3D coordinate regression CNN.
+* **Model_score.py:** The architecture of 3D coordinate regression CNN.
+* **cnn.py / cnn_Sam.py:** It contains architecture of end-to-end architecture and some important functions for all kinds of training.
+
 * **train_obj.py:** With RGB images as the input, and the depth information as the ground truth, it trains a 3D coordinate regression CNN to predict each pixel's real scene coordinate in the image.
 
 * **train_score.py:** Based on a trained 3D coordinate regression CNN, it continues to train a score regression CNN to evaluate the score for each hypothesis given their ground true camera poses.
-* **test_for_all.py:** It can test component-wisely RANSAC, Vanilla RANSAC, and DSAC pipeline and outputs rotation and translation errors of the final hypothesis.
+* **test_for_all.py:** It can test Traditional RANSAC,  Score RANSAC, and DSAC pipeline and outputs rotation and translation errors of the final hypothesis.
 * **File_operation_chess.py:** It splits the Chess image sets into the training part and the test part.
 * **File_operation_fire.py:** It splits the Fire image sets into the training part and the test part.
 
@@ -19,7 +23,7 @@ The structure of our whole project is arranged as follows.
 
 | Files Structure                                              |
 | ------------------------------------------------------------ |
-| **code**    *# it includes all codes needed* <br /> **Model parameters**   *# it includes all trained model parameters and the generated outputs*<br />          chess<br />                  *corner*<br />                  *scene*<br />          fire<br />                  *... ...*<br /> **training**   *# it includes all the information of the training set*<br />          chess <br />                  *depth_noseg*<br />                  *poses*<br />                  *rgb_noseg*<br />          fire<br />                  *... ...*<br /> **test**   *# it includes all the information of the test set*<br />          ... ...<br /> |
+| **code**    *# it includes all codes needed* <br />-- **Model parameters**   *# it includes all trained model parameters and the generated outputs*<br />---- chess<br />------ *corner*<br />------ *scene*<br />---- fire<br />------ *... ...*<br />-- **training**   *# it includes all the information of the training set*<br />---- chess <br />------ *depth_noseg*<br />------ *poses*<br />------ *rgb_noseg*<br />---- fire<br />------ *... ...*<br />-- **test**   *# it includes all the information of the test set*<br />---- ... ...<br /> |
 
  
 
